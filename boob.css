@@ -1,6 +1,6 @@
-/* CSS Template by WAS #387866, recolored to terminal-corruption theme
-   Credits preserved as required */
-
+/* === TERMINAL / CORRUPTED RED THEME BASED ON WAS #387866 === */
+/* DO NOT REMOVE CREDITS */
+ 
 /* === BACKGROUND === */
 body {
   background: url('https://i.ibb.co/8MZVpbD/pexels-pixabay-52971.jpg') center center fixed !important;
@@ -12,14 +12,14 @@ body {
 
 /* === MAIN CONTAINER === */
 .container.main {
-  background: rgba(10, 0, 0, 0.6) !important;
-  border: 1px dashed #b62929;
-  box-shadow: 0 0 25px rgba(182,41,41,0.35);
+  background: rgba(10, 0, 0, 0.8) !important;
+  border: 2px dashed #b62929 !important;
+  box-shadow: 0 0 25px rgba(182,41,41,0.35) !important;
 }
 
 /* === NAVBAR === */
 .navbar {
-  background: rgba(20, 0, 0, 0.75) !important;
+  background: rgba(20, 0, 0, 0.9) !important;
   border: none !important;
 }
 
@@ -38,7 +38,7 @@ body {
 
 /* === TOP BAR === */
 .topbar {
-  background: rgba(20, 0, 0, 0.6) !important;
+  background: rgba(20, 0, 0, 0.7) !important;
   color: #ffbcbc !important;
   border-bottom: 1px solid #b62929;
 }
@@ -46,7 +46,7 @@ body {
 /* === BREADCRUMB === */
 .breadcrumb {
   background: rgba(10, 0, 0, 0.7) !important;
-  border: 1px dotted #b62929;
+  border: 1px dotted #b62929 !important;
   color: #ffbcbc !important;
 }
 
@@ -54,7 +54,6 @@ body {
   color: #ffbcbc !important;
 }
 
-/* === CREDITS (DO NOT REMOVE) === */
 .breadcrumb::after {
   content: "Template by WAS #387866";
   color: #ffbcbc !important;
@@ -76,22 +75,35 @@ h3 {
   text-shadow: 0 0 4px #b62929;
 }
 
-/* === PANELS === */
-.panel {
+/* === PANELS / “BEHIND” LAYERS === */
+.panel,
+.container.main,
+.col-md-9,
+.inner-table .left,
+.inner-table .right,
+.right,
+.left,
+.item-header,
+.item,
+#accountoptionspanel .left,
+#changepasswordpanel .b,
+#editdetailspanel .b,
+#editdetailspanel .right,
+#sparring,
+#allies .left,
+.cave-grid,
+.mound-grid,
+.feature {
   background: rgba(20, 0, 0, 0.7) !important;
-  border: 1px dotted #b62929 !important;
-  box-shadow: inset 0 0 15px rgba(182,41,41,0.25);
-}
-
-.sidebar h3 {
-  font-family: "Courier New", monospace !important;
-  font-size: 22px;
+  border: 1px dashed #b62929 !important;
+  box-shadow: inset 0 0 12px rgba(182,41,41,0.25);
+  color: #ffbcbc !important;
 }
 
 /* === CHAT === */
 .s-chat-message:nth-child(even),
 .s-chat-message:nth-child(odd) {
-  background: rgba(20, 0, 0, 0.6) !important;
+  background: rgba(10, 0, 0, 0.6) !important;
   border-left: 2px solid #b62929;
   color: #ffbcbc !important;
 }
@@ -99,6 +111,11 @@ h3 {
 .s-chat-message__pinned {
   background: rgba(30, 0, 0, 0.8) !important;
   border-left: 3px solid #ff0000;
+}
+
+.s-chat-message_mention {
+  background-color: rgba(194, 41, 41, 0.4) !important;
+  border-left: none;
 }
 
 .s-chat-message_timestamp {
@@ -111,26 +128,32 @@ h3 {
 .alert-warning,
 .alert-danger {
   background: rgba(30, 0, 0, 0.75) !important;
-  border: 1px dashed #b62929;
+  border: 1px dashed #b62929 !important;
   color: #ffbcbc !important;
 }
 
-/* === INPUTS === */
+/* === INPUTS & TEXTAREAS === */
 input,
 textarea,
-select {
-  background: rgba(20, 0, 0, 0.8) !important;
+select,
+select[disabled] {
+  background: rgba(10, 0, 0, 0.85) !important;
   border: 1px dotted #b62929 !important;
   color: #ffbcbc !important;
   font-family: "Courier New", monospace !important;
+  box-shadow: none !important;
 }
 
 /* === BUTTONS === */
 button,
-input[type="submit"] {
+input[type="submit"],
+input.floatright,
+button.button,
+button#label_currentChannel {
   background: rgba(20, 0, 0, 0.9) !important;
   border: 1px solid #b62929 !important;
   color: #ffbcbc !important;
+  text-shadow: none !important;
   transition: 0.3s;
 }
 
@@ -153,19 +176,38 @@ a:hover {
 
 /* === PROGRESS BARS === */
 .progress {
-  background: rgba(20, 0, 0, 0.6) !important;
+  background: rgba(10, 0, 0, 0.6) !important;
+  border: 1px dashed #b62929;
 }
 
 .progress-bar {
   background: #b62929 !important;
 }
 
-/* === IMAGES === */
+/* === IMAGES / PLAYER & KING === */
 #lion_image,
 table#player img {
   border-radius: 6%;
   border: 1px solid #b62929;
   box-shadow: 0 0 12px rgba(182,41,41,0.4);
+}
+
+/* === SCROLLBAR === */
+::-webkit-scrollbar {
+  width: 10px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(10, 0, 0, 0.7) !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b62929 !important;
+  border-radius: 0px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff0000 !important;
 }
 
 /* === FOOTER === */
@@ -175,97 +217,9 @@ div.container.footer a {
   text-shadow: none !important;
 }
 
-/* === CONTRAST HARDENING :: REMOVE ALL TAN / YELLOW /* === Color behind the NUMBER values (lionesses, sub males, etc) === */
-.inner-table .right {
-  background: rgba(5, 0, 0, 0.95) !important;
-  color: #ff6a6a !important;
-  border-radius: 0px !important;
-  border-top-right-radius: 5px !important;
-  border-bottom-right-radius: 5px !important;
-  border-left: 1px solid #b62929 !important;
-  text-shadow: 0 0 4px rgba(182, 41, 41, 0.8);
-}
-
-/* === Area BEHIND the above (full stat rows) === */
-td.right,
-#about .right > td {
-  background: rgba(10, 0, 0, 0.85) !important;
-  color: #ffbcbc !important;
-  border-radius: 0px !important;
-}
-
-/* === King’s Title === */
-.xlarge.b {
-  color: #ffbcbc !important;
-  text-shadow: 0 0 6px #b62929;
-}
-
-/* === Ignore / hide unused cells === */
-.right_odd,
-#clans .left {
-  background: none !important;
-  border: none !important;
-  visibility: hidden !important;
-}
-
-/* === Tables (kill default beige bleed-through) === */
-.table {
-  background: transparent !important;
-  border: none !important;
-}
-
-/* === Cave / mound headers & labels === */
-.cave-grid,
-.mound-grid {
-  background: rgba(10, 0, 0, 0.85) !important;
-  border: 1px dotted #b62929 !important;
-  border-radius: 3px !important;
-  color: #ffbcbc !important;
-  box-shadow: inset 0 0 12px rgba(182,41,41,0.25);
-}
-
-/* === Feed All / Play All buttons === */
-.feature {
-  background: rgba(15, 0, 0, 0.9) !important;
-  color: #ffbcbc !important;
-  border: 1px solid #b62929 !important;
-  border-radius: 3px !important;
-}
-
-/* === King Dynasty, Pride Dynasty, etc === */
-.feature,
-div.left {
-  background: rgba(10, 0, 0, 0.85) !important;
-  border: 1px dotted #b62929 !important;
-  border-radius: 0px !important;
-  color: #ffbcbc !important;
-}
-
-/* === Input Areas === */
-input,
-select,
-textarea,
-select[disabled] {
-  background: rgba(5, 0, 0, 0.95) !important;
-  border: 1px dotted #b62929 !important;
-  border-radius: 0px !important;
-  color: #ffbcbc !important;
-  box-shadow: inset 0 0 8px rgba(182,41,41,0.3) !important;
-  text-shadow: none !important;
-}
-
-/* === Account options headers === */
-.item-header {
-  background: rgba(20, 0, 0, 0.85) !important;
-  color: #ffbcbc !important;
-  border: 1px solid #b62929 !important;
-  border-radius: 0px !important;
-}
-
-/* === Area BELOW headers === */
-.item {
-  background: rgba(10, 0, 0, 0.75) !important;
-  border: 1px dotted #b62929 !important;
-  border-radius: 0px !important;
-  color: #ffbcbc !important;
+/* === MOBILE FRIENDLY === */
+@media only screen and (max-width: 767px) {
+  .container.main .hidden-xs {
+    display: block !important;
+  }
 }
