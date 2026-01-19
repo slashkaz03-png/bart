@@ -16,6 +16,31 @@ body {
   border: 2px dashed #b62929 !important;
   box-shadow: 0 0 25px rgba(182,41,41,0.35) !important;
 }
+/* Container BEHIND Edit your Details*/
+/* Container BEHIND Edit your Details */
+#accountoptionspanel .left,
+#changepasswordpanel .b,
+#editdetailspanel .b,
+#sparring,
+#allies .left,
+#editdetailspanel .right {
+  background: rgba(182,41,41,0.2) !important;
+}
+}
+/* Kings Title */
+.xlarge.b {
+    color: #f0f0f0 !important; 
+}
+
+/* bar behind Lions with Mutation, Kings Name etc */
+.top,
+.bottom,
+th {
+  background: rgba(rgba(182,41,41,0.2)) !important;
+  color: #f0f0f0 !important;
+  border-radius: 0px
+}
+
 
 /* === NAVBAR === */
 .navbar {
