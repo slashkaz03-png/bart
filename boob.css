@@ -175,92 +175,97 @@ div.container.footer a {
   text-shadow: none !important;
 }
 
-/* === CONTRAST HARDENING :: REMOVE ALL TAN / YELLOW UI === */
-
-/* Any leftover default table backgrounds */
-table,
-tr,
-td,
-th {
-  background: rgba(10, 0, 0, 0.75) !important;
-  color: #ffbcbc !important;
-  border-color: #b62929 !important;
-}
-
-/* Inner info tables (stats, territory, branch, etc) */
-.inner-table,
-.inner-table .left,
+/* === CONTRAST HARDENING :: REMOVE ALL TAN / YELLOW /* === Color behind the NUMBER values (lionesses, sub males, etc) === */
 .inner-table .right {
-  background: rgba(15, 0, 0, 0.8) !important;
-  color: #ffbcbc !important;
+  background: rgba(5, 0, 0, 0.95) !important;
+  color: #ff6a6a !important;
+  border-radius: 0px !important;
+  border-top-right-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
+  border-left: 1px solid #b62929 !important;
+  text-shadow: 0 0 4px rgba(182, 41, 41, 0.8);
 }
 
-/* Feature boxes (Feed All, Play All, etc) */
-.feature,
-.feature a {
-  background: rgba(15, 0, 0, 0.85) !important;
+/* === Area BEHIND the above (full stat rows) === */
+td.right,
+#about .right > td {
+  background: rgba(10, 0, 0, 0.85) !important;
   color: #ffbcbc !important;
-  border: 1px dotted #b62929 !important;
+  border-radius: 0px !important;
 }
 
-/* Cave / mound headers and grids */
+/* === King’s Title === */
+.xlarge.b {
+  color: #ffbcbc !important;
+  text-shadow: 0 0 6px #b62929;
+}
+
+/* === Ignore / hide unused cells === */
+.right_odd,
+#clans .left {
+  background: none !important;
+  border: none !important;
+  visibility: hidden !important;
+}
+
+/* === Tables (kill default beige bleed-through) === */
+.table {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* === Cave / mound headers & labels === */
 .cave-grid,
-.mound-grid,
-.cave-grid *,
-.mound-grid * {
-  background-color: rgba(10, 0, 0, 0.8) !important;
+.mound-grid {
+  background: rgba(10, 0, 0, 0.85) !important;
+  border: 1px dotted #b62929 !important;
+  border-radius: 3px !important;
   color: #ffbcbc !important;
+  box-shadow: inset 0 0 12px rgba(182,41,41,0.25);
 }
 
-/* Dropdowns & select menus */
-select,
-option {
-  background: rgba(10, 0, 0, 0.95) !important;
-  color: #ffbcbc !important;
-}
-
-/* Tooltips & hover popups */
-.tooltip,
-.popover,
-.dropdown-menu {
-  background: rgba(10, 0, 0, 0.95) !important;
+/* === Feed All / Play All buttons === */
+.feature {
+  background: rgba(15, 0, 0, 0.9) !important;
   color: #ffbcbc !important;
   border: 1px solid #b62929 !important;
+  border-radius: 3px !important;
 }
 
-/* Default yellow system highlights (Lioden LOVES these) */
-.bg-warning,
-.bg-info,
-.bg-success {
+/* === King Dynasty, Pride Dynasty, etc === */
+.feature,
+div.left {
+  background: rgba(10, 0, 0, 0.85) !important;
+  border: 1px dotted #b62929 !important;
+  border-radius: 0px !important;
+  color: #ffbcbc !important;
+}
+
+/* === Input Areas === */
+input,
+select,
+textarea,
+select[disabled] {
+  background: rgba(5, 0, 0, 0.95) !important;
+  border: 1px dotted #b62929 !important;
+  border-radius: 0px !important;
+  color: #ffbcbc !important;
+  box-shadow: inset 0 0 8px rgba(182,41,41,0.3) !important;
+  text-shadow: none !important;
+}
+
+/* === Account options headers === */
+.item-header {
   background: rgba(20, 0, 0, 0.85) !important;
   color: #ffbcbc !important;
+  border: 1px solid #b62929 !important;
+  border-radius: 0px !important;
 }
 
-/* Any remaining light UI boxes */
-div.left,
-div.right,
-.right_odd,
-.left_odd {
+/* === Area BELOW headers === */
+.item {
   background: rgba(10, 0, 0, 0.75) !important;
+  border: 1px dotted #b62929 !important;
+  border-radius: 0px !important;
   color: #ffbcbc !important;
 }
-
-/* Fix pale link-on-dark issues */
-a,
-a span {
-  color: #ffbcbc !important;
-}
-
-a:hover,
-a:hover span {
-  color: #b62929 !important;
-  text-shadow: 0 0 4px #b62929;
-}
-
-/* Remove faint beige borders */
-hr,
-.panel-default > .panel-heading {
-  border-color: #b62929 !important;
-  background: rgba(15, 0, 0, 0.8) !important;
-}
-
